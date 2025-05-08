@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <dialog id=d><button id=b>Here
+    <script>
+        setInterval(() => {
+          b.textContent = JSON.stringify({ hasBeenActive: navigator.userActivation.hasBeenActive, isActive: navigator.userActivation.isActive });
+        }, 100);
+        d.showModal()
+    </script>
+  </body>
+</html>
